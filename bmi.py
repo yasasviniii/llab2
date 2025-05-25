@@ -18,12 +18,14 @@ def classify_bmi(bmi):
         return 1 
 
 
-#calculate_bmi(weight=57, height=1.73)
-bmi = calculate_bmi(weight=57, height=1.73)
-classify_bmi(bmi)
+def main():
+    values = input("enter height followed by weight seperated by commas: ")
+    inputval = values.split(",")
+    bmi = calculate_bmi(float(inputval[0]),float(inputval[1]))
+    classify_bmi(bmi)
 
 
 
 
-#if __name__ == "__main__":
-#    main()
+if __name__ == "__main__":
+    main()
